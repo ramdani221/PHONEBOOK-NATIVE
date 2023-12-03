@@ -1,4 +1,4 @@
-package com.native_phonebooks;
+package com.nativephonebooks;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
