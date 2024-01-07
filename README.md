@@ -4,7 +4,7 @@
 
 This is a simple full stack React-Native application which provides a solid starting point for [ReactNative](https://reactnative.dev/), [sequelize](https://sequelize.org/), [ExpressJS](https://expressjs.com/) and [NodeJS](https://nodejs.org/en/) based applications. Client side code and the backend API is written using Express.
 
-Phonebook is an application made to store names and telephone number of friends, family, or other people we recognize.
+Phonebook Ntive is an mobile application made to store names and telephone number of friends, family, or other people we recognize.
 
 ## Before You Begin
 
