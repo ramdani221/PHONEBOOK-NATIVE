@@ -75,19 +75,25 @@ This application should run on port 3001 , you can access it through browser, ju
 ## Preview
 
 * Home
+
 ![Home](https://github.com/ramdani221/PHONEBOOK-NATIVE/blob/main/screenshots/photo1701620439(1).jpeg?raw=true)
 
 * Edit
+
 ![Edit](https://github.com/ramdani221/PHONEBOOK-NATIVE/blob/main/screenshots/photo1701620439(3).jpeg?raw=true)
 
 * Add
+
 ![Add](https://github.com/ramdani221/PHONEBOOK-NATIVE/blob/main/screenshots/photo1701620439(4).jpeg?raw=true)
 
 * Avatar
+
 ![alt text](https://github.com/ramdani221/PHONEBOOK-NATIVE/blob/main/screenshots/photo1701620439.jpeg?raw=true)
 
 * Delete
+
 ![alt text](https://github.com/ramdani221/PHONEBOOK-NATIVE/blob/main/screenshots/photo1701623318.jpeg?raw=true)
 
 * Demo
+
 [![Watch the video](https://github.com/ramdani221/PHONEBOOK-NATIVE/blob/main/screenshots/Demo.png?raw=true)](https://youtu.be/pnRjPlFxgOs)
