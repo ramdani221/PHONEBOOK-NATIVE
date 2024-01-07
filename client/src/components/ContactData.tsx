@@ -58,7 +58,7 @@ export default function ContactData({
             <Image
               style={style.avatar}
               source={{
-                uri: `http://192.168.1.50:3000/images/${
+                uri: `http://192.168.0.106:3000/images/${
                   contact.avatar ? contact.avatar : 'user-tie-solid.png'
                 }`,
               }}
@@ -102,7 +102,7 @@ export default function ContactData({
             <Image
               style={style.avatar}
               source={{
-                uri: `http://192.168.1.50:3000/images/${
+                uri: `http://192.168.0.106:3000/images/${
                   contact.avatar ? contact.avatar : 'user-tie-solid.png'
                 }`,
               }}

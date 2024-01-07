@@ -1,12 +1,12 @@
 const contacts = (
-  state = {phonebooks: [], page: 1, limit: 10, total: 1, pages: 1},
+  state = { phonebooks: [], page: 1, limit: 10, total: 1, pages: 1 },
   action,
 ) => {
   switch (action.type) {
     case 'LOAD_CONTACT_SUCCESS':
-      return action.contacts;
+      return { ...action.contacts, ...action.sort };
     case 'ADD_CONTACT_SUCCESS':
-      const add = {phonebooks: [...state.phonebooks, action.data]};
+      const add = { phonebooks: [...state.phonebooks, action.data] };
       add.phonebooks.sort((a, b) => {
         if (a.name.toLowerCase() < b.name.toLowerCase()) {
           return -1;
@@ -16,31 +16,21 @@ const contacts = (
         }
         return 0;
       });
-      return {...state, ...add};
+      return { ...state, ...add };
     case 'UPDATE_CONTACT_SUCCESS':
-      const update = {
-        phonebooks: [
-          ...state.phonebooks.filter(contact => contact.id !== action.data.id),
-          action.data,
-        ],
-      };
+      const update = { phonebooks: [...(state.phonebooks.filter((contacts) => contacts.id !== action.data.id)), action.data] };
       update.phonebooks.sort((a, b) => {
-        if (a.name.toLowerCase() < b.name.toLowerCase()) {
-          return -1;
-        }
-        if (a.name.toLowerCase() > b.name.toLowerCase()) {
-          return 1;
-        }
+        if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+        if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
         return 0;
       });
+      if (state.sort === "desc") update.phonebooks.reverse()
       return {
         ...state,
         phonebooks: update.phonebooks.filter(contact => {
-          return (
-            contact.name.toLowerCase().includes(state.keyword.toLowerCase()) ||
+          return contact.name.toLowerCase().includes(state.keyword.toLowerCase()) ||
             contact.phone.toLowerCase().includes(state.keyword.toLowerCase())
-          );
-        }),
+        })
       };
     case 'DELETE_CONTACT_SUCCESS':
       return {
@@ -65,7 +55,7 @@ const contacts = (
         }
         return 0;
       });
-      return {...state, ...updateAvt};
+      return { ...state, ...updateAvt };
     case 'LOAD_PAGE_SUCCESS':
       return {
         ...state,

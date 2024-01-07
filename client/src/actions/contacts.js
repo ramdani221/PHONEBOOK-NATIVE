@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const request = axios.create({
-  baseURL: 'http://192.168.1.50:3000/api/',
+  baseURL: 'http://192.168.0.106:3000/api/',
   timeout: 1000,
   headers: {'X-Custom-Header': 'foobar'},
 });
@@ -10,7 +10,7 @@ export const loadContact = filter => dispatch =>
   request
     .get('phonebooks', {params: filter})
     .then(({data}) => {
-      dispatch({type: 'LOAD_CONTACT_SUCCESS', contacts: data});
+      dispatch({type: 'LOAD_CONTACT_SUCCESS', contacts: data,  sort: filter});
     })
     .catch(() => {
       dispatch({type: 'LOAD_CONTACT_FAILED'});
@@ -30,6 +30,7 @@ export const updateContact = (id, contact) => dispatch =>
   request
     .put(`phonebooks/${id}`, contact)
     .then(({data}) => {
+      console.log('action', data)
       dispatch({type: 'UPDATE_CONTACT_SUCCESS', data});
     })
     .catch(() => {

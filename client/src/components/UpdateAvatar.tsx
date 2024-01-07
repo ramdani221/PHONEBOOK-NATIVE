@@ -63,7 +63,7 @@ export default function UpdateAvatar() {
         <Image
           style={style.img}
           source={{
-            uri: `http://192.168.1.50:3000/images/${
+            uri: `http://192.168.0.106:3000/images/${
               store.params.avatar ? store.params.avatar : 'user-tie-solid.png'
             }`,
           }}

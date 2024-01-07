@@ -35,6 +35,8 @@ export default function ContactList({
     setPageNum(2);
   }, [dispatch, filter, contacts.limit]);
 
+  console.log('list', contacts.phonebooks);
+
   return (
     <View style={style.list}>
       <FlatList
