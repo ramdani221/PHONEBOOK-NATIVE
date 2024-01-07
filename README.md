@@ -64,7 +64,7 @@ cd PHONEBOOK-NATIVE
 # Install dependencies for client
 cd client && npm install
 
-# Start Socket.IO server
+# Start client
 npm start
 ```
 
