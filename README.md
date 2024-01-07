@@ -76,7 +76,11 @@ This application should run on port 3001 , you can access it through browser, ju
 
 * Home
 
-![Home](https://github.com/ramdani221/PHONEBOOK-NATIVE/blob/main/screenshots/photo1701620439(1).jpeg?raw=true)
+![Home](https://github.com/ramdani221/PHONEBOOK-NATIVE/blob/main/screenshots/photo1701620439(2).jpeg?raw=true)
+
+* Filter
+
+![Filter](https://github.com/ramdani221/PHONEBOOK-NATIVE/blob/main/screenshots/photo1701620439(1).jpeg?raw=true)
 
 * Edit
 
